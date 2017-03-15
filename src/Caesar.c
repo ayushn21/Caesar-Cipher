@@ -55,9 +55,8 @@ int main() {
 	        buffer[BUFFER_LENGTH - 1] = '\0';
 	    }
 	   
-		char* userInput = (char *) malloc(strlen(buffer)*sizeof(char));
-		
-		for(int i=0;i<strlen(buffer);i++)
+		char* userInput = (char *) malloc((strlen(buffer) + 1) *sizeof(char));
+		for(int i=0;i<strlen(buffer) + 1;i++)
 		{
 			userInput[i] = buffer[i];
 		}
